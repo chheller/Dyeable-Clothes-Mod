@@ -1,0 +1,5 @@
+item.cloth_Hat.name=Cloth Hat
+item.cloth_Shirt.name=Cloth Shirt
+item.cloth_Pants.name=Cloth Pants
+item.cloth_Boots.name=Cloth Boots
+itemGroup.tabDyeableClothes=Dyeable Clothes
