@@ -30,16 +30,17 @@ public class MyItemArmor extends ItemArmor {
 		return super.getUnlocalizedName();
 	}
 
+	//Create a function to give each new item an NBT upon crafting
 	@Override
 	public void onCreated(ItemStack itemStack, World world, EntityPlayer player) {
 		if (itemStack.getTagCompound() == null)
 			itemStack.setTagCompound(new NBTTagCompound());
 	}
-
+	//Magic dye numbers pulled from ItemDye.java
 	private int[] dyeints = { 1973019, 11743532, 3887386, 5320730, 2437522,
 			8073150, 2651799, 11250603, 4408131, 14188952, 4312372, 14602026,
 			6719955, 12801229, 15435844, 15790320 };
-
+	//Create the 15 other colors of armor using metadata/NBT
 	@Override
 	public void getSubItems(Item itemIn, CreativeTabs tab, List subItems) {
 		for (int i = 0; i < 16; i++) {
@@ -49,7 +50,7 @@ public class MyItemArmor extends ItemArmor {
 			ItemRenderRegister.reg(stack.getItem(), i);
 		}
 	}
-
+	//Override the get/has/setColor() functions and strip the if material != leather condition so that things will work with cloth armor.
 	@Override
 	public int getColor(ItemStack stack) {
 

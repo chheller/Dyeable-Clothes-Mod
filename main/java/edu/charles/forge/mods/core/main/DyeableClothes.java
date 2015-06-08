@@ -23,20 +23,21 @@ public class DyeableClothes {
 	public static CommonProxy proxy;
 	public static final String MODID = "dyeableclothes";
 	public static final String VERSION = "1.0.2.1";
-
+	//Define the armor material for clothes
 	public static ArmorMaterial CLOTH = EnumHelper.addArmorMaterial("CLOTH",
 			"dyeableclothes:cloth", 0, new int[] { 0, 0, 0, 0 }, 0);
-
+	//Declare each piece of clothing
 	public static MyItemArmor clothHat;
 	public static MyItemArmor clothShirt;
 	public static MyItemArmor clothPants;
 	public static MyItemArmor clothBoots;
-
+	//Create a creative tab for the new items
 	public static CreativeTabs tabDyeableClothes = new CreativeTabsMainMod("Dyeable Clothes");
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		this.proxy.preInit(event);
+		//Register all the clothes through forge
 		GameRegistry.registerItem((clothHat = new MyItemArmor("cloth_Hat",
 				CLOTH, 1, 0)).setCreativeTab(tabDyeableClothes), "cloth_Hat");
 		GameRegistry.registerItem((clothShirt = new MyItemArmor("cloth_Shirt",
