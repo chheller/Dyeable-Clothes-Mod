@@ -1,6 +1,7 @@
-package edu.charles.forge.mods;
+package edu.charles.forge.mods.tabs;
 
 
+import edu.charles.forge.mods.core.main.DyeableClothes;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
