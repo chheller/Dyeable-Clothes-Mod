@@ -22,7 +22,7 @@ public class DyeableClothes {
 	@SidedProxy(clientSide = "edu.charles.forge.mods.proxies.ClientProxy", serverSide = "edu.charles.forge.mods.proxies.ServerProxy")
 	public static CommonProxy proxy;
 	public static final String MODID = "dyeableclothes";
-	public static final String VERSION = "1.0.2";
+	public static final String VERSION = "1.0.2.1";
 
 	public static ArmorMaterial CLOTH = EnumHelper.addArmorMaterial("CLOTH",
 			"dyeableclothes:cloth", 0, new int[] { 0, 0, 0, 0 }, 0);
@@ -32,8 +32,7 @@ public class DyeableClothes {
 	public static MyItemArmor clothPants;
 	public static MyItemArmor clothBoots;
 
-	public static CreativeTabs tabDyeableClothes = new CreativeTabsMainMod(
-			"Dyeable Clothes");
+	public static CreativeTabs tabDyeableClothes = new CreativeTabsMainMod("Dyeable Clothes");
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {

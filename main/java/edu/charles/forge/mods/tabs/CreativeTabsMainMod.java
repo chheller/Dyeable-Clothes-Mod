@@ -14,9 +14,12 @@ super(tabLabel);
 }
 
 @Override
-public Item getTabIconItem()
-{
-return DyeableClothes.clothShirt;
+public Item getTabIconItem() {
+	return DyeableClothes.clothShirt;
+}
+@Override
+public String getTranslatedTabLabel() {
+	return "Dyeable Clothes";
 }
 
 }
